@@ -1,0 +1,53 @@
+<style>
+    #Testimonial-slider .quote-icon {
+        background: url("http://cdn2.hubspot.net/hub/342582/file-655682911-png/custom-modules/ico-quotes.png") no-repeat scroll 11px center #ccc;
+        border-radius: 8px;
+        -moz-border-radius: 8px;
+        -webkit-border-radius: 8px;
+        position:absolute;
+        height: 53px;
+        width: 53px;
+        left: 0px;
+        top: 0px;
+    }
+    #Testimonial-slider{
+        padding-left: 80px;
+    }
+    #Testimonial-slider .testimonial-company{
+        font-weight: bold;
+        font-size: 15px;
+    }
+    #Testimonial-slider p.testimonial{
+    font-size: 1.2em;
+    line-height: 1.4em;
+    }
+    #Testimonial-slider p.testimonial-name{
+        font-size: 18px;
+    }
+</style>
+<div id="Testimonial-slider" class="carousel slide">
+<div class="quote-icon"></div>
+  <!-- Carousel items -->
+  <div class="carousel-inner">
+    <div class="active item">
+        <p class="testimonial">{{ widget.testimonial_1 }}</p>
+        <p class="testimonial-name">– {{ widget.testimonial_1_name }}, <span class="testimonial-company">{{ widget.testimonial_1_company }}</span></p>
+    </div>
+    <div class="item">
+        <p class="testimonial">{{ widget.testimonial_2 }}</p>
+        <p class="testimonial-name">– {{ widget.testimonial_2_name }}, <span class="testimonial-company">{{ widget.testimonial_2_company }}</span></p>
+    </div>
+    <div class="item">
+        <p class="testimonial">{{ widget.testimonial_3 }}</p>
+        <p class="testimonial-name">– {{ widget.testimonial_3_name }}, <span class="testimonial-company">{{ widget.testimonial_3_company }}</span></p>
+    </div>
+  </div>
+</div>
+<script>
+$(document).ready(function() {
+    $('#Testimonial-slider').carousel({
+        interval: 4000
+	})
+});
+</script>
+

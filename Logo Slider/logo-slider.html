@@ -1,0 +1,65 @@
+<style>
+    #logo-slider ul.logo{
+     list-style: none; 
+     display:inline-block;
+     margin: 0px;
+    }
+    #logo-slider ul.logo li{
+     display:inline-block;
+     padding: 10px;
+    }
+    #logo-slider .carousel-inner>.item {
+        text-align:center;
+    }
+</style>
+<div id="logo-slider" class="carousel slide">
+  <!-- Carousel items -->
+  <div class="carousel-inner">
+    <div class="active item">
+        <ul class="logo">
+            <li>{% if widget.logo_1.src %}
+    <img src="{{ widget.logo_1.src }}" width="{{ widget.logo_1.width }}" height="{{ widget.logo_1.height }}" alt="{{ widget.logo_1.alt }}">
+{% endif %}</li>
+            <li>{% if widget.logo_2.src %}
+    <img src="{{ widget.logo_2.src }}" width="{{ widget.logo_2.width }}" height="{{ widget.logo_2.height }}" alt="{{ widget.logo_2.alt }}">
+{% endif %}</li>
+            <li>{% if widget.logo_3.src %}
+    <img src="{{ widget.logo_3.src }}" width="{{ widget.logo_3.width }}" height="{{ widget.logo_3.height }}" alt="{{ widget.logo_3.alt }}">
+{% endif %}</li>
+        <li>{% if widget.logo_4.src %}
+    <img src="{{ widget.logo_4.src }}" width="{{ widget.logo_4.width }}" height="{{ widget.logo_4.height }}" alt="{{ widget.logo_4.alt }}">
+{% endif %}</li>
+        <li>{% if widget.logo_5.src %}
+    <img src="{{ widget.logo_5.src }}" width="{{ widget.logo_5.width }}" height="{{ widget.logo_5.height }}" alt="{{ widget.logo_5.alt }}">
+{% endif %}</li>
+
+        </ul>
+    </div>
+    <div class="item">
+        <ul class="logo">
+        <li>{% if widget.logo_5.src %}
+    <img src="{{ widget.logo_5.src }}" width="{{ widget.logo_5.width }}" height="{{ widget.logo_5.height }}" alt="{{ widget.logo_5.alt }}">
+{% endif %}</li>
+        <li>{% if widget.logo_7.src %}
+    <img src="{{ widget.logo_7.src }}" width="{{ widget.logo_7.width }}" height="{{ widget.logo_7.height }}" alt="{{ widget.logo_7.alt }}">
+{% endif %}</li>
+        <li>{% if widget.logo_8.src %}
+    <img src="{{ widget.logo_8.src }}" width="{{ widget.logo_8.width }}" height="{{ widget.logo_8.height }}" alt="{{ widget.logo_8.alt }}">
+{% endif %}</li>
+            <li>{% if widget.logo_9.src %}
+    <img src="{{ widget.logo_9.src }}" width="{{ widget.logo_9.width }}" height="{{ widget.logo_9.height }}" alt="{{ widget.logo_9.alt }}">
+{% endif %}</li>
+            <li>{% if widget.logo_9.src %}
+    <img src="{{ widget.logo_9.src }}" width="{{ widget.logo_9.width }}" height="{{ widget.logo_9.height }}" alt="{{ widget.logo_9.alt }}">
+{% endif %}</li>
+        </ul>
+    </div>
+  </div>
+</div>
+<script>
+$(document).ready(function() {
+    $('#logo-slider').carousel({
+        interval: 6000
+    })
+});
+</script>

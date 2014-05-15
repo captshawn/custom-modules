@@ -1,0 +1,28 @@
+ <!-- Button to trigger modal -->
+<a href="#{{ widget.unique_modal_name }}" role="button" class="btn btn-info btn-large" data-toggle="modal">{{ widget.button_text }}</a>
+ 
+<!-- Modal -->
+<div id="{{ widget.unique_modal_name }}" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myeBookModalLabel">{{ widget.eBook_Modal_Header }}</h3>
+  </div>
+  
+  
+  <div class="modal-body"> 
+    <div class="row-fluid">
+        <div class="span12">
+            {{ widget.compelling_text }}
+        <div class="row-fluid">
+            <div class="span6">{{ widget.ebook_image }}</div>
+            <div class="span6">{{ widget.ebook_form }}</div>
+        </div>
+        </div>
+    </div>
+  </div>
+  
+  <div class="modal-footer">
+  </div>
+</div>
+

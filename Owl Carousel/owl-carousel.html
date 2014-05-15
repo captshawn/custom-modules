@@ -1,0 +1,85 @@
+
+
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css">
+<link rel="stylesheet" href="http://cdn2.hubspot.net/hub/342582/file-662460620-css/custom-modules/owl/owl.carousel.css">
+<link rel="stylesheet" href="http://cdn2.hubspot.net/hub/342582/file-657483323-css/custom-modules/owl/owl.theme.css">
+<link rel="stylesheet" href="http://cdn2.hubspot.net/hub/342582/file-654988329-css/custom-modules/owl/owl.transitions.css">
+<style>
+#owl-demo .item{
+  margin: 40px 10px;
+  text-align: center;
+  position: relative;
+}
+#owl-demo img {
+    width: 100%;
+}
+#owl-demo .caption {
+    display: block;
+    text-align: center;
+}
+#owl-demo .caption.below {
+    margin-top: 10px;
+}
+#owl-demo .caption.overlay {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+}
+</style>
+
+<div id="owl-demo" class="owl-carousel owl-theme">
+  {% if widget.image_1.src %}
+    <div class="item">
+      <img src="{{ widget.image_1.src }}" width="{{ widget.image_1.width }}" height="{{ widget.image_1.height }}" alt="{{ widget.image_1.alt }}">
+      <span class="caption {{ widget.caption_positioning }}">{{ widget.image_1_caption }}</span>
+    </div>
+  {% endif %}
+  {% if widget.image_2.src %}
+    <div class="item">
+      <img src="{{ widget.image_2.src }}" width="{{ widget.image_2.width }}" height="{{ widget.image_2.height }}" alt="{{ widget.image_2.alt }}">
+      <span class="caption {{ widget.caption_positioning }}">{{ widget.image_2_caption }}</span>
+    </div>
+  {% endif %}
+  {% if widget.image_3.src %}
+    <div class="item">
+      <img src="{{ widget.image_3.src }}" width="{{ widget.image_3.width }}" height="{{ widget.image_3.height }}" alt="{{ widget.image_3.alt }}">
+      <span class="caption {{ widget.caption_positioning }}">{{ widget.image_3_caption }}</span>
+    </div>
+  {% endif %}
+  {% if widget.image_4.src %}
+    <div class="item">
+      <img src="{{ widget.image_4.src }}" width="{{ widget.image_4.width }}" height="{{ widget.image_4.height }}" alt="{{ widget.image_4.alt }}">
+      <span class="caption {{ widget.caption_positioning }}">{{ widget.image_4_caption }}</span>
+    </div>
+  {% endif %}
+  {% if widget.image_5.src %}
+    <div class="item">
+      <img src="{{ widget.image_5.src }}" width="{{ widget.image_5.width }}" height="{{ widget.image_5.height }}" alt="{{ widget.image_5.alt }}">
+      <span class="caption {{ widget.caption_positioning }}">{{ widget.image_5_caption }}</span>
+    </div>
+  {% endif %}
+</div>
+
+<script src="//code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://cdn2.hubspot.net/hub/342582/file-657407693-js/custom-modules/owl/owl.carousel.min.js"></script>
+<script src="http://cdn2.hubspot.net/hub/342582/file-657401993-js/custom-modules/owl/bootstrap-collapse.js"></script>
+<script src="http://cdn2.hubspot.net/hub/342582/file-653695549-js/custom-modules/owl/bootstrap-transition.js"></script>
+<script src="http://cdn2.hubspot.net/hub/342582/file-662614490-js/custom-modules/owl/bootstrap-tab.js"></script> 
+
+<script>
+$(document).ready(function() {
+ 
+  $("#owl-demo").owlCarousel({
+     lazyLoad: true,
+     items:  {{ widget.slide_items }},
+     slideSpeed: {{ widget.slide_speed }},
+     autoPlay: {% if widget.auto_play %}true{% else %}false{% endif %},
+     stopOnHover: {% if widget.stop_on_hover %}true{% else %}false{% endif %},
+     navigation: {% if widget.navigation %}true{% else %}false{% endif %},
+     pagination: {% if widget.pagination %}true{% else %}false{% endif %},
+     singleItem: {% if widget.single_item %}true{% else %}false{% endif %},
+     {% if widget.single_item %}transitionStyle: {{ widget.transition_style }}{% endif %}
+  });
+}); 
+</script>

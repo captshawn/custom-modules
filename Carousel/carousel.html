@@ -1,0 +1,14 @@
+<!-- Example custom widget template (rendered on a live page: {{ is_live }}) -->
+
+{{ widget.state }} in the {{ widget.region }} is the place to be!
+
+{% if widget.show_image and widget.image.src %}
+    <img src="{{ widget.image.src }}" width="{{ widget.image.width }}" height="{{ widget.image.height }}" alt="{{ widget.image.alt }}">
+    <img class="half-sized-for-retina-screens" src="{{ widget.image.src }}" width="{{ widget.image.width|int // 2 }}" height="{{ widget.image.height|int // 2 }}" alt="Retina-ized {{ widget.image.alt }}">
+{% endif %}
+
+{% if widget.post_html %}
+    <div class="post-html">
+        {{ widget.post_html }}
+    </div>
+{% endif %}

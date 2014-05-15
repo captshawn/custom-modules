@@ -1,0 +1,48 @@
+<style>
+    #videoModal .modal-header{
+    border-bottom: 0px;
+    }
+    #videoModal .modal-body{
+        padding:0px;
+        height: auto!important;
+    }
+    #videoModal.modal{
+        background:transparent;
+        border: none!important;
+        box-shadow: none!important;
+    }
+    #videoModal iframe{
+        width: 100%;
+        height: 375px;
+    }
+    #videoModal button.close{
+        position: relative;
+        right: 8px;
+        top: -9px;
+        z-index: 9999;
+    }
+    #videoModal .close {
+        font-size: 23px;
+        font-weight: normal;
+        line-height: 22px;
+        color: #000;
+        text-shadow: 0 0px 0 #ffffff;
+        opacity: 1;
+        background: #FFF;
+        padding: 0px 5px 3px 5px;
+        border-radius: 20px;
+    }
+</style>
+
+<!-- Button to trigger modal -->
+<a href="#videoModal" role="button" class="btn btn-info btn-large" data-toggle="modal">{{ widget.button_text }}</a>
+ 
+<!-- Modal -->
+<div id="videoModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+  </div>
+  <div class="modal-body">
+    {{ widget.modal_content }}
+  </div>
+</div>

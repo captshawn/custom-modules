@@ -1,0 +1,43 @@
+{% if widget.tweet_this %}
+
+<a class="twitter-bird" target="_blank"><span class="hidden-phone">Share on Twitter</span></a>
+<style>
+.twitter-bird {
+display: inline-block;
+overflow: hidden;
+color: #0786c1;
+padding-left: 51px;
+background: url("http://cdn2.hubspot.net/hub/256303/file-431869106-png/ChrisBattis_Theme/Twitter_logo_blue.png") center left no-repeat;
+background-size: 40px 40px;
+border-bottom: 0;
+opacity: 0.8;
+min-height: 40px;
+font-family: "museo-sans",sans-serif;
+font-size: 28px;
+font-weight:700;
+}
+.twitter-bird:hover {
+opacity: 1;
+}
+.social-sharing-section {
+padding-bottom: .2rem;
+}
+</style>
+
+<script>
+(function(){
+$('.twitter-bird').attr('href', '' +
+    'https://twitter.com/intent/tweet?tw_p=tweetbutton' + 
+    '&original_referer=' + encodeURIComponent(location.href) +
+    '&url=' + encodeURIComponent(location.href) +
+    '&text=' + encodeURIComponent($('h2:first').text()) +
+    '&via=seabatt' +
+'');
+
+$('.twitter-bird').parent().addClass('social-sharing-section');
+})();
+</script>
+
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+{% endif %}
