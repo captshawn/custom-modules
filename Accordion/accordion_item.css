@@ -36,24 +36,24 @@
     position: absolute;
     top: 0;
     left: 0;
-    background: #333 url(//cdn2.hubspot.net/hub/413501/file-1304369911-png/images/toggle_plus.png) center no-repeat;
+    background: #333 url(//cdn2.hubspot.net/hub/70580/file-1306913428-png/toggle_plus.png) center no-repeat;
 }
 
 .no-js .accordion-header:before {
     display: none;
 }
 
-.accordion-header:after { /* <- preload active image - this is hidden */
+.accordion-header:after { /* <- preload active image to prevent lag when expanded - this is hidden */
     content: "";
     display: block;
     width: 0;
     height: 0;
     overflow: hidden;
-    background-image: url(//cdn2.hubspot.net/hub/413501/file-1308720510-png/images/toggle_minus.png);
+    background-image: url(//cdn2.hubspot.net/hub/70580/file-1306913423-png/toggle_minus.png);
 }
 
 .accordion-header.expanded:before {
-    background: #3498db url(//cdn2.hubspot.net/hub/413501/file-1308720510-png/images/toggle_minus.png) center no-repeat;
+    background: #3498db url(//cdn2.hubspot.net/hub/70580/file-1306913423-png/toggle_minus.png) center no-repeat;
 }
 
 .js-enabled .accordion-body {
