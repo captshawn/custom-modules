@@ -1,6 +1,11 @@
+/**
+ * Copy this into your CSS Stylesheet
+ * Replace images and/or make style adjustments
+ */
+
 /* Accordion Item (custom module) */
 .accordion-container {
-    position: relative;
+    position: relative; /* <- prevent slideDown "jumps" */
     padding: 10px 0;
     border-bottom: 1px solid #E0DEDE;
 }
@@ -38,7 +43,7 @@
     display: none;
 }
 
-.accordion-header:after { /* preload active image - this is hidden */
+.accordion-header:after { /* <- preload active image - this is hidden */
     content: "";
     display: block;
     width: 0;
