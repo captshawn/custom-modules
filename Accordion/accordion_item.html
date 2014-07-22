@@ -1,3 +1,49 @@
+<!--
+    I. Configure the Custom Module with the settings/tokens below.
+    
+    1) Text
+    ----------------
+
+    Label:
+    Accordion Name
+
+    Help text:
+    Add exactly the same name (case sensitive) for multiple accordion items that are part of the same accordion group. Example: accordion1
+
+    Default text:
+    accordion1
+
+    2) Text
+    ----------------
+
+    Label:
+    Accordion Header
+
+    Default text:
+    Click to expand
+
+    3) Rich Text
+    ----------------
+    
+    Label:
+    Accordion body
+    
+    Default rich text:
+    Accordion Body
+    
+    4) Boolean
+    ----------------
+    
+    Label:
+    Expanded by Default
+    
+    Default checkbox value
+    Unchecked
+    
+    II. Copy / Paste the HTML markup below, excluding this HTML comment block.
+
+-->
+
 <div class="accordion-container" data-accordion-name="{{ widget.accordion_name }}">
     <div class="accordion-header{% if widget.expanded_by_default %} expanded{% endif %}">{{ widget.accordion_header }}</div>
     <div class="accordion-body"{% if widget.expanded_by_default %} style="display: block;"{% endif %}>
