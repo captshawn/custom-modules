@@ -1,0 +1,6 @@
+<div class="accordion-container" data-accordion-name="{{ widget.accordion_name }}">
+    <div class="accordion-header{% if widget.expanded_by_default %} expanded{% endif %}">{{ widget.accordion_header }}</div>
+    <div class="accordion-body"{% if widget.expanded_by_default %} style="display: block;"{% endif %}>
+        <div class="accordion-body-content clearfix">{{ widget.accordion_body }}</div>
+    </div>
+</div>
