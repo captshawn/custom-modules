@@ -1,4 +1,9 @@
-$(function() {
+$(function() { /* <- jQuery Ready */
+    
+    /**
+     * Copy this into your Main javascript file
+     * Make sure to include the function inside the jQuery ready function
+     */
 
     // Accordion Item (custom module)
     $('.accordion-header').on('click', function() {
@@ -11,5 +16,5 @@ $(function() {
         }
         else $(this).removeClass('expanded').next('.accordion-body').slideUp();
         return false;
-    });
+    }); // <- END Accordion Item (custom module)
 });
