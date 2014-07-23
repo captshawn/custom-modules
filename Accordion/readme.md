@@ -1,4 +1,4 @@
-Accordion
+Accordion Item (temp. example: http://alturl.com/ffo7s)
 ================================================
 Lorem ipsum dolor sit amet.
 
