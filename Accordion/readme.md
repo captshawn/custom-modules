@@ -1,6 +1,6 @@
-Accordion Item (temp. example: http://alturl.com/ffo7s)
+Accordion Item
 ================================================
-Lorem ipsum dolor sit amet.
+(temp. example: http://alturl.com/ffo7s)
 
 Step 1
 ------
