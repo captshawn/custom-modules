@@ -1,0 +1,66 @@
+/**
+ * Copy this into your CSS Stylesheet
+ * Replace images and/or make style adjustments
+ */
+
+/* Accordion Item (custom module) */
+.accordion-container {
+    position: relative; /* <- prevent slideDown "jumps" */
+    padding: 10px 0;
+    border-bottom: 1px solid #E0DEDE;
+}
+
+.accordion-header {
+    padding-left: 40px;
+    position: relative;
+    color: #333;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.no-js .accordion-header {
+    padding-left: 0;
+}
+
+.accordion-header:hover {
+    color: #3498db;
+}
+
+.accordion-header:before {
+    content: "";
+    display: block;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #333 url(//cdn2.hubspot.net/hub/70580/file-1306913428-png/toggle_plus.png) center no-repeat;
+}
+
+.no-js .accordion-header:before {
+    display: none;
+}
+
+.accordion-header:after { /* <- preload active image to prevent lag when expanded - this is hidden */
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    background-image: url(//cdn2.hubspot.net/hub/70580/file-1306913423-png/toggle_minus.png);
+}
+
+.accordion-header.expanded:before {
+    background: #3498db url(//cdn2.hubspot.net/hub/70580/file-1306913423-png/toggle_minus.png) center no-repeat;
+}
+
+.js-enabled .accordion-body {
+    display: none;
+}
+
+.accordion-body-content {
+    padding-top: 12px;
+    padding-bottom: 5px;
+}
